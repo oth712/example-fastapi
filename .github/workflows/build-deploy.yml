@@ -4,6 +4,15 @@ on: [push,pull_request]
 
 jobs:
   job1:
+    env:
+      DATABASE_HOST: localhost
+      DATABASE_ENGINE: mysql+pymysql
+      DATABASE_PASSWORD: 062142
+      DATABASE_NAME: fastapi
+      DATABASE_USERNAME: root
+      SECRET_KEY: 09d25e094faa6ca2556c818122bcc9563b93f7099f6f0f4caa6cf73b88e8d3e7
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: 30
     runs-on: windows-latest
     steps:
       - name: pulling git repo
